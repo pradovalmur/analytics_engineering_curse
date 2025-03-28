@@ -1,2 +1,4 @@
 dbt-duckdb
 duckdb
+luigi
+harlequin
