@@ -1,0 +1,29 @@
+[0m16:19:58.594087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f01e6d3140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f01e807080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f01e6d3110>]}
+
+
+============================== 16:19:58.602724 | c0da3463-f5df-409e-956c-85fd42d2acc7 ==============================
+[0m16:19:58.602724 [info ] [MainThread]: Running with dbt=1.9.3
+[0m16:19:58.603939 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init tesouro', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:19:58.636550 [debug] [MainThread]: Starter project path: /usr/local/python/3.12.1/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:19:58.646803 [info ] [MainThread]: 
+Your new dbt project "tesouro" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:19:58.648313 [info ] [MainThread]: Setting up your profile.
+[0m16:20:02.047454 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 3.557231, "process_in_blocks": "48048", "process_kernel_time": 0.176906, "process_mem_max_rss": "113996", "process_out_blocks": "72", "process_user_time": 1.517619}
+[0m16:20:02.048189 [debug] [MainThread]: Command `dbt init` succeeded at 16:20:02.048021 after 3.56 seconds
+[0m16:20:02.048969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f01dbdfef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f01e6d3140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77f01e675820>]}
+[0m16:20:02.050217 [debug] [MainThread]: Flushing usage events
+[0m16:20:02.389264 [debug] [MainThread]: An error was encountered while trying to flush usage events
