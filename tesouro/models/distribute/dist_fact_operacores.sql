@@ -33,11 +33,11 @@ fact_operacoes as (
         quantidade,
         valor_operacao
     from base as b
-    inner join {{ ref('dim_canal') }} as dc on b.canal_operacao = dc.canal_operacao
-    inner join {{ ref('dim_tipo_operacao') }} as dto on b.tipo_operacao = dto.tipo_operacao
-    inner join {{ ref('dim_titulo') }} as dt on  b.titulo = dt.titulo
-    inner join {{ ref('dim_tipo_titulo') }} as dtt on b.tipo_titulo = dtt.tipo_titulo
-    inner join {{ ref('dim_investidores') }} as di on b.codigo_investidor = di.id_investidor
+    inner join {{ ref('dist_dim_canal') }} as dc on b.canal_operacao = dc.canal_operacao
+    inner join {{ ref('dist_dim_tipo_operacao') }} as dto on b.tipo_operacao = dto.tipo_operacao
+    inner join {{ ref('dist_dim_titulo') }} as dt on  b.titulo = dt.titulo
+    inner join {{ ref('dist_dim_tipo_titulo') }} as dtt on b.tipo_titulo = dtt.tipo_titulo
+    inner join {{ ref('dist_dim_investidores') }} as di on b.codigo_investidor = di.id_investidor
 ) 
 
 select * from fact_operacoes

@@ -16,7 +16,7 @@ WITH raw AS (
         "Valor da Operacao" as valor_operacao,
         "Tipo da Operacao" as tipo_operacao,
         "Canal da Operacao" as canal_operacao
-    FROM read_csv_auto('C:\Users\prado\projetos\analytics_engineering_curse\curso\data\raw\operacoes.csv')
+    FROM read_csv_auto('../curso/data/raw/operacoes.csv')
 ),
 typed as (
     select

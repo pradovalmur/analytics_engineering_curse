@@ -18,7 +18,7 @@ WITH raw AS (
         "Pais do Investidor" as pais_investidor,
         "Situacao da Conta" as Situacao_conta,
         "Operou 12 Meses" as operou_12_meses
-    FROM read_csv_auto('C:\Users\prado\projetos\analytics_engineering_curse\curso\data\raw\investidores.csv')
+    FROM read_csv_auto('../curso/data/raw/investidores.csv')
 ),
 typed as (
     select 
