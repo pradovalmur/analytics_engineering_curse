@@ -1,4 +1,4 @@
+dbt-core
 dbt-duckdb
+great_expectations
 duckdb
-luigi
-harlequin
