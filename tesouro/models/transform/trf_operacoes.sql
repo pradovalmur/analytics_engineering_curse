@@ -33,7 +33,7 @@ ajustado as (
         cast(REPLACE(quantidade, ',', '.') as double) as quantidade,
         CAST(REPLACE(REPLACE(valor_titulo, '.', ''), ',', '.') AS DOUBLE) AS valor_titulo,
         CAST(REPLACE(REPLACE(valor_operacao, '.', ''), ',', '.') AS DOUBLE) AS valor_operacao,
-        case when tipo_operacao = 'C' then 'Compra'
+        case when tipo_operacao = 'C' then 'compra'
             when tipo_operacao = 'V' then 'venda'
             else 'outro' end  as tipo_operacao,
         c.canal_operacao_text as canal_operacao

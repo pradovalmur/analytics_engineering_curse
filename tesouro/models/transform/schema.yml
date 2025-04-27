@@ -39,4 +39,30 @@ models:
           - accepted_values:
               values: ['sim', 'não', 'outro']
 
+  - name: trf_operacoes
+    description: "Transformação final dos dados de operacoes"
+    columns:
+      - name: codigo_investidor
+        tests:
+          - not_null
+          - unique
+
+      - name: quantidade
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+
+      - name: canal_operacoes
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['homebroker', 'site']
+
+      - name: tipo_operacao
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['compra', 'venda']
 
