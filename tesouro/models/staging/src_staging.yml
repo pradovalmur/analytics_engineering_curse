@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: src_staging
+    schema: public  # ou o schema real onde está a tabela
+    database: dbt_db  # opcional, só se diferente
+    tables:
+      - name: operacoes
+        description: "Tabela importada pelo dbt seed, com a fonte de dados de operacoes"
+        
+      - name: investidores
+        description: "Tabela importada pelo dbt seed, com a fonte de dados de investidores"

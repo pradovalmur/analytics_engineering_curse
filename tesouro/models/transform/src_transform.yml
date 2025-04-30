@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: src_transform
+    schema: public  # ou o schema real onde está a tabela
+    database: dbt_db  # opcional, só se diferente
+    tables:
+      - name: uf
+        description: "Tabela importada pelo dbt seed, com o descritivo dos estados"
+        
+      - name: genero
+        description: "Tabela importada pelo dbt seed, com o descritivo do genero"
+
+      - name: canal
+        descritpion: "Tabela importada pelo dbt seed, com o descritivo do canal"

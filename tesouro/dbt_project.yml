@@ -42,3 +42,10 @@ models:
         +materialized: table
 
     
+# remove o prefixo "public_" nos schemas
+dispatch:
+  - macro_namespace: dbt
+    search_order: ['tesouro', 'dbt']
+
+# Sobrescreve função para não concatenar schema base + nome da subpasta
+macro-paths: ["macros"]

@@ -18,7 +18,7 @@ WITH raw AS (
         "Pais do Investidor" as pais_investidor,
         "Situacao da Conta" as Situacao_conta,
         "Operou 12 Meses" as operou_12_meses
-    FROM read_csv_auto('../curso/data/investidores.csv')
+    FROM {{ source('src_staging', 'investidores') }}
 ),
 typed as (
     select 

@@ -1,12 +1,13 @@
-{% macro tempo_conta(data_coluna, tipo="anos") %}
+{% macro tempo_conta(data_coluna, tipo="anos", formato="DD-MM-YYYY") %}
     case
         when {{ data_coluna }} is null then null
         {% if tipo == 'dias' %}
-            else datediff('day', {{ data_coluna }}, current_date)
+            else (current_date - to_date({{ data_coluna }}, '{{ formato }}'))::int
         {% elif tipo == 'meses' %}
-            else datediff('month', {{ data_coluna }}, current_date)
+            else date_part('year', age(current_date, to_date({{ data_coluna }}, '{{ formato }}'))) * 12 +
+                 date_part('month', age(current_date, to_date({{ data_coluna }}, '{{ formato }}')))
         {% elif tipo == 'anos' %}
-            else floor(datediff('day', {{ data_coluna }}, current_date) / 365.25)
+            else date_part('year', age(current_date, to_date({{ data_coluna }}, '{{ formato }}')))
         {% else %}
             else null
         {% endif %}

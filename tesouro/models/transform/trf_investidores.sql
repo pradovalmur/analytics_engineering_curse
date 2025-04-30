@@ -65,8 +65,8 @@ ajustado as (
             else 'outro' end as operou_12_meses
 
     from base as b
-    inner join {{ ref('genero') }} as g on b.genero = g.genero_id
-    inner join {{ ref('uf') }} as u on b.uf_investidor = u.uf_investidor_id
+    inner join {{ source('src_transform','genero') }} as g on b.genero = g.genero_id
+    inner join {{ source('src_transform','uf') }} as u on b.uf_investidor = u.uf_investidor_id
    
     where b.rn = 1
 

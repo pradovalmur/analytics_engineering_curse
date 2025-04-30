@@ -16,7 +16,7 @@ WITH raw AS (
         "Valor da Operacao" as valor_operacao,
         "Tipo da Operacao" as tipo_operacao,
         "Canal da Operacao" as canal_operacao
-    FROM read_csv_auto('../curso/data/operacoes.csv')
+    FROM {{ source('src_staging', 'operacoes') }}
 ),
 typed as (
     select
