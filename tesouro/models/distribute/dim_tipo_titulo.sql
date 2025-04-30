@@ -6,8 +6,7 @@
 
 with base as (
     select distinct
-        tipo_titulo,
-        vencimento_titulo
+        tipo_titulo
     from {{ ref('trf_operacoes') }}
 ),
 

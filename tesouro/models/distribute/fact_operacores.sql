@@ -37,7 +37,7 @@ fact_operacoes as (
     inner join {{ ref('dim_tipo_operacao') }} as dto on b.tipo_operacao = dto.tipo_operacao
     inner join {{ ref('dim_titulo') }} as dt on  b.titulo = dt.titulo
     inner join {{ ref('dim_tipo_titulo') }} as dtt on b.tipo_titulo = dtt.tipo_titulo
-    inner join {{ ref('dim_investidores') }} as di on b.codigo_investidor = di.id_investidor
+    
 ) 
 
 select * from fact_operacoes
